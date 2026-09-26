@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Pastel Bloom",
+    "category": "Aesthetic",
+    "resolution": "5K",
+    "preview": "https://your-link-here.com/pastel-bloom-preview.jpg",
+    "download": "https://your-link-here.com/pastel-bloom-5k.jpg",
+    "premium": true
+  },
+  {
+    "title": "Midnight Drive",
+    "category": "Automotive",
+    "resolution": "5K",
+    "preview": "https://your-link-here.com/midnight-drive-preview.jpg",
+    "download": "https://your-link-here.com/midnight-drive-5k.jpg",
+    "premium": true
+  },
+  {
+    "title": "Minimal Black",
+    "category": "Minimal",
+    "resolution": "4K",
+    "preview": "https://your-link-here.com/minimal-black-preview.jpg",
+    "download": "https://your-link-here.com/minimal-black-4k.jpg",
+    "premium": true
+  }
+]
