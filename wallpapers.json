@@ -64,19 +64,19 @@
     "premium": true
   },
   {
-    "title": "Ford GT",
-    "category": "Automotive",
-    "resolution": "4K",
-    "preview": "wallpapers/FORD%20GT.png",
-    "download": "wallpapers/FORD%20GT.png",
-    "premium": true
-  },
-  {
     "title": "Focus",
     "category": "Automotive",
     "resolution": "4K",
     "preview": "wallpapers/FOCUS.png",
     "download": "wallpapers/FOCUS.png",
+    "premium": true
+  },
+  {
+    "title": "Ford GT",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/FORD%20GT.png",
+    "download": "wallpapers/FORD%20GT.png",
     "premium": true
   },
   {
@@ -168,19 +168,19 @@
     "premium": true
   },
   {
-    "title": "RX7",
-    "category": "Automotive",
-    "resolution": "4K",
-    "preview": "wallpapers/RX7.png",
-    "download": "wallpapers/RX7.png",
-    "premium": true
-  },
-  {
     "title": "RX7 2",
     "category": "Automotive",
     "resolution": "4K",
     "preview": "wallpapers/RX7%202.png",
     "download": "wallpapers/RX7%202.png",
+    "premium": true
+  },
+  {
+    "title": "RX7",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/RX7.png",
+    "download": "wallpapers/RX7.png",
     "premium": true
   },
   {
