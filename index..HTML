@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perceptuals — Premium Wallpapers</title>
+    <meta name="description" content="Premium wallpapers by Perceptuals. High-resolution wallpapers designed for modern screens.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #111111;
+            --surface-hover: #171717;
+            --border: rgba(255,255,255,0.08);
+            --text: #f5f5f5;
+            --muted: #858585;
+            --accent: #ffffff;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8,8,8,0.82);
+            backdrop-filter: blur(18px);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+        }
+
+        .logo span {
+            color: #777;
+        }
+
+        .nav-right {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 110px 6% 80px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 8vw, 125px);
+            line-height: 0.88;
+            letter-spacing: -7px;
+            max-width: 1000px;
+            margin-bottom: 35px;
+        }
+
+        .hero-description {
+            color: #888;
+            max-width: 500px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* CONTROLS */
+
+        .controls {
+            max-width: 1500px;
+            margin: 0 auto 45px;
+            padding: 0 6%;
+        }
+
+        .search {
+            width: 100%;
+            max-width: 500px;
+            padding: 16px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: white;
+            outline: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .search:focus {
+            border-color: rgba(255,255,255,0.25);
+        }
+
+        .categories {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            padding: 10px 17px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #888;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .category:hover,
+        .category.active {
+            background: white;
+            color: black;
+        }
+
+        /* GRID */
+
+        .gallery {
+            max-width: 1500px;
+            margin: auto;
+            padding: 0 6% 100px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: var(--surface);
+            cursor: pointer;
+            aspect-ratio: 4 / 5;
+            border: 1px solid var(--border);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.9),
+                transparent 55%
+            );
+            pointer-events: none;
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 22px;
+            z-index: 2;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .card-meta {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .premium {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 3;
+
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+
+            padding: 7px 11px;
+            border-radius: 20px;
+
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* MODAL */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            backdrop-filter: blur(20px);
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 999;
+            padding: 30px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: min(1100px, 100%);
+            max-height: 90vh;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .modal-image {
+            width: 65%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .modal-info {
+            width: 35%;
+        }
+
+        .modal-info h2 {
+            font-size: 38px;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .modal-info p {
+            color: #888;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .download {
+            display: inline-block;
+            padding: 15px 25px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .download:hover {
+            transform: translateY(-2px);
+        }
+
+        .close {
+            position: fixed;
+            top: 25px;
+            right: 30px;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: #111;
+            color: white;
+
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* EMPTY */
+
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px;
+            color: #555;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 35px 6%;
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1100px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .hero {
+                padding: 75px 5% 55px;
+            }
+
+            h1 {
+                font-size: 60px;
+                letter-spacing: -4px;
+            }
+
+            .controls {
+                padding: 0 5%;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5% 70px;
+                gap: 10px;
+            }
+
+            .card {
+                border-radius: 10px;
+            }
+
+            .card-info {
+                padding: 13px;
+            }
+
+            .card-title {
+                font-size: 14px;
+            }
+
+            .modal-content {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .modal-image {
+                width: 100%;
+                max-height: 60vh;
+            }
+
+            .modal-info {
+                width: 100%;
+            }
+
+            .modal-info h2 {
+                font-size: 28px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        PERCEPTUALS<span>.</span>
+    </div>
+
+    <div class="nav-right">
+        PREMIUM WALLPAPERS
+    </div>
+</nav>
+
+
+<section class="hero">
+
+    <div class="eyebrow">
+        Perceptuals / Wallpaper Vault
+    </div>
+
+    <h1>
+        Wallpapers<br>
+        worth keeping.
+    </h1>
+
+    <p class="hero-description">
+        Curated high-resolution wallpapers designed for people
+        who care what their screen looks like.
+    </p>
+
+</section>
+
+
+<section class="controls">
+
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="Search wallpapers..."
+    >
+
+    <div id="categories" class="categories"></div>
+
+</section>
+
+
+<main id="gallery" class="gallery"></main>
+
+
+<footer>
+
+    <span>© 2026 PERCEPTUALS</span>
+
+    <span>Designed for screens.</span>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+    <button class="close" onclick="closeModal()">×</button>
+
+    <div class="modal-content">
+
+        <img id="modalImage" class="modal-image">
+
+        <div class="modal-info">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <a
+                id="downloadButton"
+                class="download"
+                target="_blank"
+                download
+            >
+                Download Wallpaper
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let wallpapers = [];
+let activeCategory = "All";
+
+
+async function loadWallpapers() {
+
+    try {
+
+        const response = await fetch("wallpapers.json");
+
+        wallpapers = await response.json();
+
+        createCategories();
+        displayWallpapers();
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("gallery").innerHTML =
+            `<div class="empty">
+                Failed to load wallpapers.
+            </div>`;
+    }
+}
+
+
+function createCategories() {
+
+    const categories = [
+        "All",
+        ...new Set(
+            wallpapers.map(wallpaper => wallpaper.category)
+        )
+    ];
+
+    const container =
+        document.getElementById("categories");
+
+    container.innerHTML = "";
+
+    categories.forEach(category => {
+
+        const button = document.createElement("button");
+
+        button.className =
+            "category " +
+            (category === "All" ? "active" : "");
+
+        button.textContent = category;
+
+        button.onclick = () => {
+
+            activeCategory = category;
+
+            document
+                .querySelectorAll(".category")
+                .forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+            button.classList.add("active");
+
+            displayWallpapers();
+        };
+
+        container.appendChild(button);
+
+    });
+}
+
+
+function displayWallpapers() {
+
+    const gallery =
+        document.getElementById("gallery");
+
+    const search =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase();
+
+    const filtered =
+        wallpapers.filter(wallpaper => {
+
+            const categoryMatch =
+                activeCategory === "All" ||
+                wallpaper.category === activeCategory;
+
+            const searchMatch =
+                wallpaper.title
+                    .toLowerCase()
+                    .includes(search);
+
+            return categoryMatch && searchMatch;
+
+        });
+
+
+    gallery.innerHTML = "";
+
+
+    if (filtered.length === 0) {
+
+        gallery.innerHTML =
+            `<div class="empty">
+                No wallpapers found.
+            </div>`;
+
+        return;
+    }
+
+
+    filtered.forEach(wallpaper => {
+
+        const card =
+            document.createElement("article");
+
+        card.className = "card";
+
+        card.innerHTML = `
+
+            <img
+                src="${wallpaper.preview}"
+                alt="${wallpaper.title}"
+                loading="lazy"
+            >
+
+            ${
+                wallpaper.premium
+                ?
+                `<div class="premium">
+                    Premium
+                </div>`
+                :
+                ""
+            }
+
+            <div class="card-info">
+
+                <div class="card-title">
+                    ${wallpaper.title}
+                </div>
+
+                <div class="card-meta">
+                    ${wallpaper.category}
+                    &nbsp; · &nbsp;
+                    ${wallpaper.resolution}
+                </div>
+
+            </div>
+        `;
+
+
+        card.onclick = () =>
+            openModal(wallpaper);
+
+        gallery.appendChild(card);
+
+    });
+}
+
+
+function openModal(wallpaper) {
+
+    document
+        .getElementById("modalImage")
+        .src = wallpaper.preview;
+
+    document
+        .getElementById("modalTitle")
+        .textContent = wallpaper.title;
+
+    document
+        .getElementById("modalDescription")
+        .textContent =
+            `${wallpaper.category} wallpaper · ${wallpaper.resolution}`;
+
+    document
+        .getElementById("downloadButton")
+        .href = wallpaper.download;
+
+    document
+        .getElementById("modal")
+        .classList.add("active");
+}
+
+
+function closeModal() {
+
+    document
+        .getElementById("modal")
+        .classList.remove("active");
+}
+
+
+document
+    .getElementById("search")
+    .addEventListener(
+        "input",
+        displayWallpapers
+    );
+
+
+document
+    .getElementById("modal")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+            closeModal();
+        }
+
+    });
+
+
+loadWallpapers();
+
+</script>
+
+</body>
+</html>
