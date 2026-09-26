@@ -1,32 +1,212 @@
 [
-  {"title":"350Z","category":"Automotive","resolution":"4K","preview":"wallpapers/350Z.png","download":"wallpapers/350Z.png","premium":true},
-  {"title":"AE86","category":"Automotive","resolution":"4K","preview":"wallpapers/AE86.png","download":"wallpapers/AE86.png","premium":true},
-  {"title":"AMG GT","category":"Automotive","resolution":"4K","preview":"wallpapers/AMG%20GT.png","download":"wallpapers/AMG%20GT.png","premium":true},
-  {"title":"Aventador","category":"Automotive","resolution":"4K","preview":"wallpapers/AVENTADOR.png","download":"wallpapers/AVENTADOR.png","premium":true},
-  {"title":"Corvette C8","category":"Automotive","resolution":"4K","preview":"wallpapers/C8.png","download":"wallpapers/C8.png","premium":true},
-  {"title":"Bugatti Chiron","category":"Automotive","resolution":"4K","preview":"wallpapers/CHIRON.png","download":"wallpapers/CHIRON.png","premium":true},
-  {"title":"BMW E46","category":"Automotive","resolution":"4K","preview":"wallpapers/E46.png","download":"wallpapers/E46.png","premium":true},
-  {"title":"Lotus Exige","category":"Automotive","resolution":"4K","preview":"wallpapers/EXIGE.png","download":"wallpapers/EXIGE.png","premium":true},
-  {"title":"Focus","category":"Automotive","resolution":"4K","preview":"wallpapers/FOCUS.png","download":"wallpapers/FOCUS.png","premium":true},
-  {"title":"Ford GT","category":"Automotive","resolution":"4K","preview":"wallpapers/FORD%20GT.png","download":"wallpapers/FORD%20GT.png","premium":true},
-  {"title":"GTR R34","category":"Automotive","resolution":"4K","preview":"wallpapers/GTR%20r34.png","download":"wallpapers/GTR%20r34.png","premium":true},
-  {"title":"Honda NSX","category":"Automotive","resolution":"4K","preview":"wallpapers/HONDA%20NSX.png","download":"wallpapers/HONDA%20NSX.png","premium":true},
-  {"title":"Huayra","category":"Automotive","resolution":"4K","preview":"wallpapers/HUAYRA.png","download":"wallpapers/HUAYRA.png","premium":true},
-  {"title":"Huracan","category":"Automotive","resolution":"4K","preview":"wallpapers/HURACAN.png","download":"wallpapers/HURACAN.png","premium":true},
-  {"title":"Koenigsegg Jesko","category":"Automotive","resolution":"4K","preview":"wallpapers/JESKO.png","download":"wallpapers/JESKO.png","premium":true},
-  {"title":"Lancer Evo","category":"Automotive","resolution":"4K","preview":"wallpapers/LANCER%20EVO.png","download":"wallpapers/LANCER%20EVO.png","premium":true},
-  {"title":"BMW M4","category":"Automotive","resolution":"4K","preview":"wallpapers/M4.png","download":"wallpapers/M4.png","premium":true},
-  {"title":"Mustang GT","category":"Automotive","resolution":"4K","preview":"wallpapers/MUSTANG%20GT.png","download":"wallpapers/MUSTANG%20GT.png","premium":true},
-  {"title":"R34 Neon","category":"Automotive","resolution":"4K","preview":"wallpapers/R34%20neon.png","download":"wallpapers/R34%20neon.png","premium":true},
-  {"title":"R35","category":"Automotive","resolution":"4K","preview":"wallpapers/R35.png","download":"wallpapers/R35.png","premium":true},
-  {"title":"Audi R8","category":"Automotive","resolution":"4K","preview":"wallpapers/R8.png","download":"wallpapers/R8.png","premium":true},
-  {"title":"RX7 2","category":"Automotive","resolution":"4K","preview":"wallpapers/RX7%202.png","download":"wallpapers/RX7%202.png","premium":true},
-  {"title":"RX7","category":"Automotive","resolution":"4K","preview":"wallpapers/RX7.png","download":"wallpapers/RX7.png","premium":true},
-  {"title":"Silvia S15","category":"Automotive","resolution":"4K","preview":"wallpapers/SILVIA%20S15.png","download":"wallpapers/SILVIA%20S15.png","premium":true},
-  {"title":"SRT","category":"Automotive","resolution":"4K","preview":"wallpapers/SRT.png","download":"wallpapers/SRT.png","premium":true},
-  {"title":"Supra MK4","category":"Automotive","resolution":"4K","preview":"wallpapers/Supra%20MK4.png","download":"wallpapers/Supra%20MK4.png","premium":true},
-  {"title":"Dodge Viper ACR","category":"Automotive","resolution":"4K","preview":"wallpapers/VIPER%20ACR.png","download":"wallpapers/VIPER%20ACR.png","premium":true},
-  {"title":"WRX STI","category":"Automotive","resolution":"4K","preview":"wallpapers/WRX%20STI.png","download":"wallpapers/WRX%20STI.png","premium":true},
-  {"title":"ZL1 Camaro","category":"Automotive","resolution":"4K","preview":"wallpapers/ZL1%20CAMARO.png","download":"wallpapers/ZL1%20CAMARO.png","premium":true},
-  {"title":"MK4","category":"Automotive","resolution":"4K","preview":"wallpapers/mk4.png","download":"wallpapers/mk4.png","premium":true}
+  {
+    "title": "Nissan 350Z",
+    "preview": "350Z.png",
+    "download": "350Z.png",
+    "category": "Nissan",
+    "premium": false
+  },
+  {
+    "title": "Toyota AE86",
+    "preview": "AE86.png",
+    "download": "AE86.png",
+    "category": "Toyota",
+    "premium": false
+  },
+  {
+    "title": "Mercedes-AMG GT",
+    "preview": "AMG GT.png",
+    "download": "AMG GT.png",
+    "category": "Mercedes",
+    "premium": false
+  },
+  {
+    "title": "Lamborghini Aventador",
+    "preview": "AVENTADOR.png",
+    "download": "AVENTADOR.png",
+    "category": "Lamborghini",
+    "premium": false
+  },
+  {
+    "title": "Chevrolet Corvette C8",
+    "preview": "C8.png",
+    "download": "C8.png",
+    "category": "Chevrolet",
+    "premium": false
+  },
+  {
+    "title": "Bugatti Chiron",
+    "preview": "CHIRON.png",
+    "download": "CHIRON.png",
+    "category": "Bugatti",
+    "premium": false
+  },
+  {
+    "title": "BMW E46",
+    "preview": "E46.png",
+    "download": "E46.png",
+    "category": "BMW",
+    "premium": false
+  },
+  {
+    "title": "Lotus Exige",
+    "preview": "EXIGE.png",
+    "download": "EXIGE.png",
+    "category": "Lotus",
+    "premium": false
+  },
+  {
+    "title": "Ford Focus",
+    "preview": "FOCUS.png",
+    "download": "FOCUS.png",
+    "category": "Ford",
+    "premium": false
+  },
+  {
+    "title": "Ford GT",
+    "preview": "FORD GT.png",
+    "download": "FORD GT.png",
+    "category": "Ford",
+    "premium": false
+  },
+  {
+    "title": "Nissan Skyline GT-R R34",
+    "preview": "GTR r34.png",
+    "download": "GTR r34.png",
+    "category": "Nissan",
+    "premium": false
+  },
+  {
+    "title": "Honda NSX",
+    "preview": "HONDA NSX.png",
+    "download": "HONDA NSX.png",
+    "category": "Honda",
+    "premium": false
+  },
+  {
+    "title": "Pagani Huayra",
+    "preview": "HUAYRA.png",
+    "download": "HUAYRA.png",
+    "category": "Pagani",
+    "premium": false
+  },
+  {
+    "title": "Lamborghini Huracan",
+    "preview": "HURACAN.png",
+    "download": "HURACAN.png",
+    "category": "Lamborghini",
+    "premium": false
+  },
+  {
+    "title": "Koenigsegg Jesko",
+    "preview": "JESKO.png",
+    "download": "JESKO.png",
+    "category": "Koenigsegg",
+    "premium": false
+  },
+  {
+    "title": "Mitsubishi Lancer Evolution",
+    "preview": "LANCER EVO.png",
+    "download": "LANCER EVO.png",
+    "category": "Mitsubishi",
+    "premium": false
+  },
+  {
+    "title": "BMW M4",
+    "preview": "M4.png",
+    "download": "M4.png",
+    "category": "BMW",
+    "premium": false
+  },
+  {
+    "title": "Ford Mustang GT",
+    "preview": "MUSTANG GT.png",
+    "download": "MUSTANG GT.png",
+    "category": "Ford",
+    "premium": false
+  },
+  {
+    "title": "Nissan R34 Neon",
+    "preview": "R34 neon.png",
+    "download": "R34 neon.png",
+    "category": "Nissan",
+    "premium": false
+  },
+  {
+    "title": "Nissan Skyline R35",
+    "preview": "R35.png",
+    "download": "R35.png",
+    "category": "Nissan",
+    "premium": false
+  },
+  {
+    "title": "Audi R8",
+    "preview": "R8.png",
+    "download": "R8.png",
+    "category": "Audi",
+    "premium": false
+  },
+  {
+    "title": "Mazda RX-7",
+    "preview": "RX7.png",
+    "download": "RX7.png",
+    "category": "Mazda",
+    "premium": false
+  },
+  {
+    "title": "Mazda RX-7 2",
+    "preview": "RX7 2.png",
+    "download": "RX7 2.png",
+    "category": "Mazda",
+    "premium": false
+  },
+  {
+    "title": "Nissan Silvia S15",
+    "preview": "SILVIA S15.png",
+    "download": "SILVIA S15.png",
+    "category": "Nissan",
+    "premium": false
+  },
+  {
+    "title": "Dodge SRT",
+    "preview": "SRT.png",
+    "download": "SRT.png",
+    "category": "Dodge",
+    "premium": false
+  },
+  {
+    "title": "Toyota Supra MK4",
+    "preview": "Supra MK4.png",
+    "download": "Supra MK4.png",
+    "category": "Toyota",
+    "premium": false
+  },
+  {
+    "title": "Dodge Viper ACR",
+    "preview": "VIPER ACR.png",
+    "download": "VIPER ACR.png",
+    "category": "Dodge",
+    "premium": false
+  },
+  {
+    "title": "Subaru WRX STI",
+    "preview": "WRX STI.png",
+    "download": "WRX STI.png",
+    "category": "Subaru",
+    "premium": false
+  },
+  {
+    "title": "Chevrolet Camaro ZL1",
+    "preview": "ZL1 CAMARO.png",
+    "download": "ZL1 CAMARO.png",
+    "category": "Chevrolet",
+    "premium": false
+  },
+  {
+    "title": "Toyota MK4",
+    "preview": "mk4.png",
+    "download": "mk4.png",
+    "category": "Toyota",
+    "premium": false
+  }
 ]
