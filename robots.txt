@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://justinsebastian340-prog.github.io/jvx7n/sitemap.xml
