@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -374,7 +374,7 @@ select:hover {
 
 <header>
     <div class="logo">
-        <span>P</span>ERCEPTUALS
+        <span>P</span>PERCEPTUALS
     </div>
 
     <div class="header-text">
@@ -518,9 +518,6 @@ let visibleWallpapers = [];
 let currentWallpaper = null;
 
 
-/* ==========================================
-   ELEMENTS
-========================================== */
 
 const gallery =
     document.getElementById("gallery");
@@ -556,19 +553,11 @@ const next =
     document.getElementById("next");
 
 
-/* ==========================================
-   IMAGE PATH
-========================================== */
 
 function getImagePath(filename) {
 
-    /*
-     * Your PNG files are inside:
-     *
-     * wallpapers/
-     *
-     * So we add that folder here.
-     */
+
+     
 
     return "wallpapers/" +
         String(filename)
@@ -582,18 +571,13 @@ function getImagePath(filename) {
 }
 
 
-/* ==========================================
-   LOAD JSON
-========================================== */
+
 
 async function loadWallpapers() {
 
     try {
 
-        /*
-         * cache-busting prevents GitHub Pages/browser
-         * from giving us an old JSON file.
-         */
+
 
         const response =
             await fetch(
@@ -652,10 +636,6 @@ async function loadWallpapers() {
 }
 
 
-/* ==========================================
-   FILTER
-========================================== */
-
 function getVisibleWallpapers() {
 
     const query =
@@ -705,9 +685,7 @@ function getVisibleWallpapers() {
 }
 
 
-/* ==========================================
-   RENDER
-========================================== */
+
 
 function render() {
 
@@ -735,13 +713,7 @@ function render() {
     visibleWallpapers.forEach(
         (item, index) => {
 
-            /*
-             * BUTTON, NOT A LINK.
-             *
-             * Therefore clicking it cannot
-             * navigate to a 404 page.
-             */
-
+      
             const card =
                 document.createElement("button");
 
@@ -838,9 +810,7 @@ function render() {
 }
 
 
-/* ==========================================
-   OPEN VIEWER
-========================================== */
+
 
 function openViewer(item) {
 
@@ -916,9 +886,7 @@ function openViewer(item) {
 }
 
 
-/* ==========================================
-   CLOSE VIEWER
-========================================== */
+
 
 function closeViewer() {
 
@@ -933,9 +901,7 @@ function closeViewer() {
 }
 
 
-/* ==========================================
-   NEXT
-========================================== */
+
 
 function nextWallpaper() {
 
@@ -964,9 +930,6 @@ function nextWallpaper() {
 }
 
 
-/* ==========================================
-   PREVIOUS
-========================================== */
 
 function previousWallpaper() {
 
@@ -997,9 +960,7 @@ function previousWallpaper() {
 }
 
 
-/* ==========================================
-   ESCAPE HTML
-========================================== */
+
 
 function escapeHTML(value) {
 
@@ -1013,9 +974,7 @@ function escapeHTML(value) {
 }
 
 
-/* ==========================================
-   EVENTS
-========================================== */
+
 
 search.addEventListener(
     "input",
@@ -1047,9 +1006,6 @@ previous.addEventListener(
 );
 
 
-/*
- * Clicking outside the viewer closes it.
- */
 
 viewer.addEventListener(
     "click",
@@ -1112,9 +1068,7 @@ document.addEventListener(
 );
 
 
-/* ==========================================
-   START
-========================================== */
+
 
 loadWallpapers();
 
@@ -1122,4 +1076,4 @@ loadWallpapers();
 
 </body>
 </html>
-```
+
