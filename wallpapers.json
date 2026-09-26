@@ -1,26 +1,114 @@
 [
   {
-    "title": "Mountain Escape",
-    "category": "Nature",
+    "title": "918",
+    "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=90",
-    "download": "https://images.unsplash.com/photo-1500534623283-312aade485b7?fm=jpg&q=100&w=3840",
+    "preview": "wallpapers/918.png",
+    "download": "wallpapers/918.png",
     "premium": true
   },
   {
-    "title": "Ocean Horizon",
-    "category": "Nature",
+    "title": "R35",
+    "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=90",
-    "download": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=100&w=3840",
+    "preview": "wallpapers/R35.png",
+    "download": "wallpapers/R35.png",
     "premium": true
   },
   {
-    "title": "Minimal Architecture",
-    "category": "Minimal",
+    "title": "Lotus Exige",
+    "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=90",
-    "download": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?fm=jpg&q=100&w=3840",
+    "preview": "wallpapers/EXIGE.png",
+    "download": "wallpapers/EXIGE.png",
+    "premium": true
+  },
+  {
+    "title": "Dodge Viper ACR",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/VIPER ACR.png",
+    "download": "wallpapers/VIPER ACR.png",
+    "premium": true
+  },
+  {
+    "title": "ZL1 Camaro",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/ZL1 CAMARO.png",
+    "download": "wallpapers/ZL1 CAMARO.png",
+    "premium": true
+  },
+  {
+    "title": "Ford GT",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/FORD GT.png",
+    "download": "wallpapers/FORD GT.png",
+    "premium": true
+  },
+  {
+    "title": "Bugatti Chiron",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/CHIRON.png",
+    "download": "wallpapers/CHIRON.png",
+    "premium": true
+  },
+  {
+    "title": "Koenigsegg Jesko",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/JESKO.png",
+    "download": "wallpapers/JESKO.png",
+    "premium": true
+  },
+  {
+    "title": "Pagani Huayra",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/HUAYRA.png",
+    "download": "wallpapers/HUAYRA.png",
+    "premium": true
+  },
+  {
+    "title": "Lamborghini Aventador",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/AVENTADOR.png",
+    "download": "wallpapers/AVENTADOR.png",
+    "premium": true
+  },
+  {
+    "title": "McLaren 720S",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/720S.png",
+    "download": "wallpapers/720S.png",
+    "premium": true
+  },
+  {
+    "title": "Ferrari 458",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/458.png",
+    "download": "wallpapers/458.png",
+    "premium": true
+  },
+  {
+    "title": "Lamborghini Huracan",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/HURACAN.png",
+    "download": "wallpapers/HURACAN.png",
+    "premium": true
+  },
+  {
+    "title": "Porsche 911 GT3",
+    "category": "Automotive",
+    "resolution": "4K",
+    "preview": "wallpapers/911 GT3.png",
+    "download": "wallpapers/911 GT3.png",
     "premium": true
   }
 ]
