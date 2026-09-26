@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +8,7 @@
 <title>Perceptuals | Automotive Wallpapers</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -19,16 +20,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header {
     height: 70px;
     padding: 0 5%;
     border-bottom: 1px solid #30332d;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     position: sticky;
     top: 0;
     z-index: 50;
+
     background: rgba(16,17,15,.95);
     backdrop-filter: blur(15px);
 }
@@ -48,11 +56,19 @@ header {
     text-transform: uppercase;
 }
 
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
     width: 90%;
     max-width: 1500px;
     margin: auto;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     padding: 70px 0 45px;
@@ -82,9 +98,14 @@ header {
     line-height: 1.7;
 }
 
+/* =========================
+   TOOLBAR
+========================= */
+
 .toolbar {
     border-top: 1px solid #30332d;
     padding: 25px 0;
+
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -93,9 +114,12 @@ header {
 .search {
     width: 320px;
     height: 42px;
+
     background: #171916;
     border: 1px solid #30332d;
+
     color: white;
+
     padding: 0 15px;
     outline: none;
 }
@@ -104,47 +128,69 @@ header {
     border-color: #d7f36a;
 }
 
-select,
-.tool-button {
+select {
     height: 42px;
+
     background: #171916;
     border: 1px solid #30332d;
+
     color: #aaa;
+
     padding: 0 14px;
+
     cursor: pointer;
 }
 
-.tool-button:hover,
 select:hover {
     border-color: #d7f36a;
     color: white;
 }
 
+/* =========================
+   GALLERY
+========================= */
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 16px;
+
     padding-bottom: 70px;
 }
 
 .card {
     position: relative;
+
     border: 1px solid #292c27;
+
     background: #171916;
+
     aspect-ratio: 4 / 5;
+
     overflow: hidden;
+
     cursor: pointer;
+
     padding: 0;
+
     color: white;
+
     text-align: left;
 }
 
 .card img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
-    transition: transform .4s ease;
+
+    transition:
+        transform .4s ease;
 }
 
 .card:hover img {
@@ -153,73 +199,119 @@ select:hover {
 
 .card::after {
     content: "";
+
     position: absolute;
+
     inset: 40% 0 0;
-    background: linear-gradient(
-        transparent,
-        rgba(0,0,0,.9)
-    );
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+
     pointer-events: none;
 }
 
+/* =========================
+   CARD INFO
+========================= */
+
 .card-info {
     position: absolute;
+
     left: 15px;
     right: 15px;
     bottom: 15px;
+
     z-index: 2;
 }
 
 .card-title {
     font-size: 16px;
     font-weight: bold;
+
     margin-bottom: 5px;
 }
 
 .card-category {
     color: #bbbdb4;
+
     font-size: 10px;
+
     text-transform: uppercase;
 }
 
+/* =========================
+   PREMIUM BADGE
+========================= */
+
 .card-tag {
     position: absolute;
+
     top: 12px;
     left: 12px;
+
     z-index: 3;
+
     background: rgba(10,10,10,.8);
-    border: 1px solid rgba(255,255,255,.2);
+
+    border: 1px solid
+        rgba(215,243,106,.5);
+
+    color: #d7f36a;
+
     padding: 6px 8px;
+
     font-size: 9px;
+
     text-transform: uppercase;
 }
+
+/* =========================
+   LOADING / ERROR
+========================= */
 
 .loading,
 .error,
 .empty {
     grid-column: 1 / -1;
+
     padding: 70px 20px;
+
     text-align: center;
+
     color: #999c91;
 }
 
 .error strong,
 .empty strong {
     display: block;
+
     color: white;
+
     margin-bottom: 10px;
 }
 
-/* VIEWER */
+/* =========================
+   VIEWER
+========================= */
 
 .viewer {
     position: fixed;
+
     inset: 0;
-    background: rgba(0,0,0,.94);
+
+    background:
+        rgba(0,0,0,.94);
+
     z-index: 1000;
+
     display: none;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
 }
 
@@ -229,61 +321,105 @@ select:hover {
 
 .viewer-box {
     width: min(1200px, 95vw);
+
     height: min(850px, 92vh);
+
     background: #171916;
+
     border: 1px solid #30332d;
+
     display: grid;
-    grid-template-columns: 1fr 300px;
+
+    grid-template-columns:
+        1fr 300px;
+
     overflow: hidden;
 }
 
+/* =========================
+   VIEWER IMAGE
+========================= */
+
 .viewer-image {
     background: #080908;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 25px;
 }
 
 .viewer-image img {
     max-width: 100%;
     max-height: 100%;
+
     object-fit: contain;
 }
 
+/* =========================
+   VIEWER SIDE
+========================= */
+
 .viewer-side {
     border-left: 1px solid #30332d;
+
     padding: 30px;
+
     display: flex;
+
     flex-direction: column;
 }
+
+/* =========================
+   CLOSE BUTTON
+========================= */
 
 .close {
     width: 40px;
     height: 40px;
+
     align-self: flex-end;
+
     background: transparent;
+
     border: 1px solid #30332d;
+
     color: white;
+
     cursor: pointer;
-    font-size: 18px;
+
+    font-size: 24px;
 }
 
 .close:hover {
     color: #d7f36a;
+
     border-color: #d7f36a;
 }
 
+/* =========================
+   VIEWER TEXT
+========================= */
+
 .viewer-side h2 {
     font-size: 32px;
+
     margin-top: 40px;
 }
 
 .viewer-side p {
     color: #999c91;
+
     line-height: 1.6;
+
     font-size: 13px;
 }
+
+/* =========================
+   VIEWER BUTTONS
+========================= */
 
 .viewer-buttons {
     margin-top: auto;
@@ -292,45 +428,70 @@ select:hover {
 .download {
     width: 100%;
     height: 45px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     background: #d7f36a;
+
     color: #151610;
+
     text-decoration: none;
+
     font-weight: bold;
+
     font-size: 12px;
+
     margin-bottom: 10px;
 }
 
 .navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 8px;
 }
 
 .navigation button {
     height: 42px;
+
     background: transparent;
+
     border: 1px solid #30332d;
+
     color: white;
+
     cursor: pointer;
 }
 
 .navigation button:hover {
     color: #d7f36a;
+
     border-color: #d7f36a;
 }
 
-@media(max-width: 1000px) {
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, 1fr);
     }
+
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
+
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .toolbar {
@@ -343,8 +504,12 @@ select:hover {
 
     .viewer-box {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
+
+        grid-template-rows:
+            1fr auto;
+
         height: 95vh;
+
         overflow-y: auto;
     }
 
@@ -354,11 +519,15 @@ select:hover {
 
     .viewer-side {
         border-left: 0;
-        border-top: 1px solid #30332d;
+
+        border-top:
+            1px solid #30332d;
     }
+
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
+
     .gallery {
         gap: 8px;
     }
@@ -366,150 +535,189 @@ select:hover {
     .container {
         width: 92%;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
     <div class="logo">
-        <span>P</span>PERCEPTUALS
+        <span>P</span>ERCEPTUALS
     </div>
 
     <div class="header-text">
         Automotive Wallpaper Archive
     </div>
+
 </header>
 
 
 <main class="container">
 
-    <section class="hero">
-        <small>Wallpaper archive / 01</small>
 
-        <h1>
-            Made for the <em>drive.</em>
-        </h1>
+<section class="hero">
 
-        <p>
-            A curated collection of automotive wallpapers
-            for your desktop and mobile screens.
-        </p>
-    </section>
+    <small>
+        Wallpaper archive / 01
+    </small>
 
+    <h1>
+        Made for the <em>drive.</em>
+    </h1>
 
-    <section class="toolbar">
+    <p>
+        A curated collection of automotive wallpapers
+        for your desktop and mobile screens.
+    </p>
 
-        <input
-            id="search"
-            class="search"
-            type="search"
-            placeholder="Search wallpapers..."
-        >
-
-        <div>
-            <select id="sort">
-                <option value="default">Curated</option>
-                <option value="az">A → Z</option>
-                <option value="za">Z → A</option>
-            </select>
-        </div>
-
-    </section>
+</section>
 
 
-    <section
-        id="gallery"
-        class="gallery"
+<section class="toolbar">
+
+    <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Search wallpapers..."
     >
-        <div class="loading">
-            Loading wallpapers...
-        </div>
-    </section>
+
+    <select id="sort">
+
+        <option value="default">
+            Curated
+        </option>
+
+        <option value="az">
+            A → Z
+        </option>
+
+        <option value="za">
+            Z → A
+        </option>
+
+    </select>
+
+</section>
+
+
+<section
+    id="gallery"
+    class="gallery"
+>
+
+    <div class="loading">
+        Loading wallpapers...
+    </div>
+
+</section>
+
 
 </main>
 
 
-<!-- VIEWER -->
+<!-- =========================
+     IMAGE VIEWER
+========================= -->
 
 <div
     id="viewer"
     class="viewer"
 >
 
-    <div class="viewer-box">
 
-        <div
-            id="viewerImage"
-            class="viewer-image"
-        ></div>
+<div class="viewer-box">
 
 
-        <div class="viewer-side">
-
-            <button
-                id="close"
-                class="close"
-                type="button"
-            >
-                ×
-            </button>
+    <div
+        id="viewerImage"
+        class="viewer-image"
+    ></div>
 
 
-            <div>
-
-                <h2 id="viewerTitle"></h2>
-
-                <p id="viewerCategory"></p>
-
-            </div>
+    <div class="viewer-side">
 
 
-            <div class="viewer-buttons">
-
-                <a
-                    id="download"
-                    class="download"
-                    href="#"
-                    download
-                >
-                    DOWNLOAD WALLPAPER
-                </a>
+        <button
+            id="close"
+            class="close"
+            type="button"
+        >
+            ×
+        </button>
 
 
-                <div class="navigation">
+        <div>
 
-                    <button
-                        id="previous"
-                        type="button"
-                    >
-                        ← Previous
-                    </button>
+            <h2
+                id="viewerTitle"
+            ></h2>
 
-                    <button
-                        id="next"
-                        type="button"
-                    >
-                        Next →
-                    </button>
-
-                </div>
-
-            </div>
+            <p
+                id="viewerCategory"
+            ></p>
 
         </div>
 
+
+        <div class="viewer-buttons">
+
+
+            <a
+                id="download"
+                class="download"
+                href="#"
+                download
+            >
+                DOWNLOAD WALLPAPER
+            </a>
+
+
+            <div class="navigation">
+
+
+                <button
+                    id="previous"
+                    type="button"
+                >
+                    ← Previous
+                </button>
+
+
+                <button
+                    id="next"
+                    type="button"
+                >
+                    Next →
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
     </div>
+
+
+</div>
+
 
 </div>
 
 
 <script>
 
-/* ==========================================
+/* =========================
    DATA
-========================================== */
+========================= */
 
 let wallpapers = [];
 
@@ -518,6 +726,9 @@ let visibleWallpapers = [];
 let currentWallpaper = null;
 
 
+/* =========================
+   ELEMENTS
+========================= */
 
 const gallery =
     document.getElementById("gallery");
@@ -553,11 +764,11 @@ const next =
     document.getElementById("next");
 
 
+/* =========================
+   IMAGE PATH
+========================= */
 
 function getImagePath(filename) {
-
-
-     
 
     return "wallpapers/" +
         String(filename)
@@ -568,16 +779,17 @@ function getImagePath(filename) {
                     encodeURIComponent(part)
             )
             .join("/");
+
 }
 
 
-
+/* =========================
+   LOAD JSON
+========================= */
 
 async function loadWallpapers() {
 
     try {
-
-
 
         const response =
             await fetch(
@@ -612,8 +824,7 @@ async function loadWallpapers() {
         }
 
 
-        wallpapers =
-            data;
+        wallpapers = data;
 
 
         render();
@@ -621,20 +832,34 @@ async function loadWallpapers() {
 
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "Wallpaper loading error:",
+            error
+        );
 
 
         gallery.innerHTML = `
+
             <div class="error">
-                <strong>Could not load the collection.</strong>
-                ${error.message}
+
+                <strong>
+                    Could not load the collection.
+                </strong>
+
+                ${escapeHTML(error.message)}
+
             </div>
+
         `;
 
     }
 
 }
 
+
+/* =========================
+   FILTER
+========================= */
 
 function getVisibleWallpapers() {
 
@@ -645,26 +870,39 @@ function getVisibleWallpapers() {
 
 
     let result =
-        wallpapers.filter(item => {
+        wallpapers.filter(
+            item => {
 
-            return (
-                String(item.title || "")
+                return (
+
+                    String(
+                        item.title || ""
+                    )
                     .toLowerCase()
                     .includes(query)
-                ||
-                String(item.category || "")
+
+                    ||
+
+                    String(
+                        item.category || ""
+                    )
                     .toLowerCase()
                     .includes(query)
-            );
 
-        });
+                );
+
+            }
+        );
 
 
     if (sort.value === "az") {
 
         result.sort(
             (a, b) =>
-                a.title.localeCompare(b.title)
+                String(a.title)
+                    .localeCompare(
+                        String(b.title)
+                    )
         );
 
     }
@@ -674,7 +912,10 @@ function getVisibleWallpapers() {
 
         result.sort(
             (a, b) =>
-                b.title.localeCompare(a.title)
+                String(b.title)
+                    .localeCompare(
+                        String(a.title)
+                    )
         );
 
     }
@@ -685,7 +926,9 @@ function getVisibleWallpapers() {
 }
 
 
-
+/* =========================
+   RENDER GALLERY
+========================= */
 
 function render() {
 
@@ -696,13 +939,22 @@ function render() {
     gallery.innerHTML = "";
 
 
-    if (visibleWallpapers.length === 0) {
+    if (
+        visibleWallpapers.length === 0
+    ) {
 
         gallery.innerHTML = `
+
             <div class="empty">
-                <strong>No wallpapers found.</strong>
+
+                <strong>
+                    No wallpapers found.
+                </strong>
+
                 Try another search.
+
             </div>
+
         `;
 
         return;
@@ -711,21 +963,36 @@ function render() {
 
 
     visibleWallpapers.forEach(
-        (item, index) => {
+        item => {
 
-      
+
+            /*
+             * Button instead of link.
+             *
+             * This prevents the browser
+             * from navigating to a 404 page.
+             */
+
             const card =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
+
 
             card.type =
                 "button";
+
 
             card.className =
                 "card";
 
 
+            /* IMAGE */
+
             const image =
-                document.createElement("img");
+                document.createElement(
+                    "img"
+                );
 
 
             image.src =
@@ -735,7 +1002,7 @@ function render() {
 
 
             image.alt =
-                item.title;
+                item.title || "";
 
 
             image.loading =
@@ -746,49 +1013,81 @@ function render() {
                 function() {
 
                     console.error(
-                        "Image failed:",
+                        "Image failed to load:",
                         image.src
                     );
 
                 };
 
 
-            const tag =
-                document.createElement("div");
+            /* PREMIUM BADGE ONLY */
 
-            tag.className =
-                "card-tag";
+            if (item.premium) {
 
-            tag.textContent =
-                item.premium
-                    ? "Premium"
-                    : "Wallpaper";
+                const tag =
+                    document.createElement(
+                        "div"
+                    );
 
+
+                tag.className =
+                    "card-tag";
+
+
+                tag.textContent =
+                    "Premium";
+
+
+                card.appendChild(tag);
+
+            }
+
+
+            /* CARD INFORMATION */
 
             const info =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
+
 
             info.className =
                 "card-info";
 
 
             info.innerHTML = `
+
                 <div class="card-title">
-                    ${escapeHTML(item.title)}
+
+                    ${escapeHTML(
+                        item.title || ""
+                    )}
+
                 </div>
 
                 <div class="card-category">
-                    ${escapeHTML(item.category || "Automotive")}
+
+                    ${escapeHTML(
+                        item.category ||
+                        "Automotive"
+                    )}
+
                 </div>
+
             `;
 
 
-            card.appendChild(image);
+            card.appendChild(
+                image
+            );
 
-            card.appendChild(tag);
 
-            card.appendChild(info);
+            card.appendChild(
+                info
+            );
 
+
+            /* OPEN VIEWER */
 
             card.addEventListener(
                 "click",
@@ -802,7 +1101,9 @@ function render() {
             );
 
 
-            gallery.appendChild(card);
+            gallery.appendChild(
+                card
+            );
 
         }
     );
@@ -810,7 +1111,9 @@ function render() {
 }
 
 
-
+/* =========================
+   OPEN VIEWER
+========================= */
 
 function openViewer(item) {
 
@@ -824,11 +1127,14 @@ function openViewer(item) {
         );
 
 
-    viewerImage.innerHTML = "";
+    viewerImage.innerHTML =
+        "";
 
 
     const image =
-        document.createElement("img");
+        document.createElement(
+            "img"
+        );
 
 
     image.src =
@@ -836,35 +1142,47 @@ function openViewer(item) {
 
 
     image.alt =
-        item.title;
+        item.title || "";
 
 
     image.onerror =
         function() {
 
             viewerImage.innerHTML = `
+
                 <div style="
                     color:#aaa;
                     text-align:center;
                     padding:20px;
                 ">
-                    Image could not be loaded.<br><br>
-                    ${escapeHTML(imagePath)}
+
+                    Image could not be loaded.
+
+                    <br><br>
+
+                    ${escapeHTML(
+                        imagePath
+                    )}
+
                 </div>
+
             `;
 
         };
 
 
-    viewerImage.appendChild(image);
+    viewerImage.appendChild(
+        image
+    );
 
 
     viewerTitle.textContent =
-        item.title;
+        item.title || "";
 
 
     viewerCategory.textContent =
-        item.category || "Automotive";
+        item.category ||
+        "Automotive";
 
 
     download.href =
@@ -886,7 +1204,9 @@ function openViewer(item) {
 }
 
 
-
+/* =========================
+   CLOSE VIEWER
+========================= */
 
 function closeViewer() {
 
@@ -901,11 +1221,16 @@ function closeViewer() {
 }
 
 
-
+/* =========================
+   NEXT WALLPAPER
+========================= */
 
 function nextWallpaper() {
 
-    if (!currentWallpaper) {
+    if (
+        !currentWallpaper ||
+        visibleWallpapers.length === 0
+    ) {
         return;
     }
 
@@ -924,16 +1249,24 @@ function nextWallpaper() {
 
 
     openViewer(
-        visibleWallpapers[nextIndex]
+        visibleWallpapers[
+            nextIndex
+        ]
     );
 
 }
 
 
+/* =========================
+   PREVIOUS WALLPAPER
+========================= */
 
 function previousWallpaper() {
 
-    if (!currentWallpaper) {
+    if (
+        !currentWallpaper ||
+        visibleWallpapers.length === 0
+    ) {
         return;
     }
 
@@ -954,27 +1287,53 @@ function previousWallpaper() {
 
 
     openViewer(
-        visibleWallpapers[previousIndex]
+        visibleWallpapers[
+            previousIndex
+        ]
     );
 
 }
 
 
-
+/* =========================
+   ESCAPE HTML
+========================= */
 
 function escapeHTML(value) {
 
     return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
 
-
+/* =========================
+   EVENTS
+========================= */
 
 search.addEventListener(
     "input",
@@ -1006,6 +1365,7 @@ previous.addEventListener(
 );
 
 
+/* Click outside viewer */
 
 viewer.addEventListener(
     "click",
@@ -1023,16 +1383,16 @@ viewer.addEventListener(
 );
 
 
-/*
- * Keyboard controls.
- */
+/* Keyboard controls */
 
 document.addEventListener(
     "keydown",
     function(event) {
 
         if (
-            !viewer.classList.contains("active")
+            !viewer.classList.contains(
+                "active"
+            )
         ) {
             return;
         }
@@ -1068,7 +1428,9 @@ document.addEventListener(
 );
 
 
-
+/* =========================
+   START WEBSITE
+========================= */
 
 loadWallpapers();
 
@@ -1076,4 +1438,4 @@ loadWallpapers();
 
 </body>
 </html>
-
+```
