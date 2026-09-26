@@ -5,375 +5,239 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Perceptuals — Automotive Wallpapers</title>
+<title>Perceptuals | Automotive Wallpapers</title>
 
 <style>
-:root {
-    --bg: #10110f;
-    --panel: #171916;
-    --line: #30332d;
-    --text: #f2f1e9;
-    --muted: #a0a296;
-    --acid: #d7f36a;
-    --serif: Georgia, serif;
-    --sans: Arial, Helvetica, sans-serif;
-}
-
 * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
+    background: #10110f;
+    color: #f2f2ec;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-button,
-input,
-select {
-    font: inherit;
-}
-
-button {
-    color: inherit;
-}
-
-.topbar {
-    height: 66px;
-    padding: 0 5vw;
+header {
+    height: 70px;
+    padding: 0 5%;
+    border-bottom: 1px solid #30332d;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--line);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 50;
     background: rgba(16,17,15,.95);
     backdrop-filter: blur(15px);
 }
 
-.brand {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.brand-mark {
-    width: 25px;
-    height: 25px;
-    border: 1px solid var(--acid);
-    display: grid;
-    place-items: center;
-    color: var(--acid);
-    font-family: var(--serif);
+.logo span {
+    color: #d7f36a;
 }
 
-.top-meta {
-    color: var(--muted);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-}
-
-.wrap {
-    width: min(1480px, 100%);
-    margin: auto;
-    padding: 0 5vw;
-}
-
-.intro {
-    padding: 70px 0 48px;
-    display: grid;
-    grid-template-columns: 1fr 350px;
-    gap: 30px;
-    align-items: end;
-}
-
-.eyebrow {
-    color: var(--acid);
+.header-text {
+    color: #999c91;
     font-size: 11px;
-    letter-spacing: .12em;
     text-transform: uppercase;
 }
 
-.intro h1 {
-    margin: 18px 0 0;
-    font-size: clamp(45px, 7vw, 88px);
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.hero {
+    padding: 70px 0 45px;
+}
+
+.hero small {
+    color: #d7f36a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 90px);
     line-height: .95;
-    font-weight: 600;
+    font-weight: 500;
+    margin: 20px 0;
 }
 
-.intro h1 em {
-    color: var(--acid);
-    font-family: var(--serif);
-    font-weight: 400;
+.hero h1 em {
+    color: #d7f36a;
+    font-family: Georgia, serif;
 }
 
-.intro-copy {
-    color: var(--muted);
-    line-height: 1.8;
-    font-size: 14px;
-}
-
-.rule {
-    border: 0;
-    border-top: 1px solid var(--line);
+.hero p {
+    color: #999c91;
+    max-width: 500px;
+    line-height: 1.7;
 }
 
 .toolbar {
+    border-top: 1px solid #30332d;
     padding: 25px 0;
     display: flex;
     justify-content: space-between;
     gap: 15px;
 }
 
-.tools-left,
-.tools-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.searchbox {
-    width: 330px;
+.search {
+    width: 320px;
     height: 42px;
-    border: 1px solid var(--line);
-    background: var(--panel);
-    display: flex;
-    align-items: center;
-    padding: 0 13px;
+    background: #171916;
+    border: 1px solid #30332d;
+    color: white;
+    padding: 0 15px;
+    outline: none;
 }
 
-.searchbox input {
-    width: 100%;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: var(--text);
-    padding-left: 10px;
-}
-
-.searchbox input::placeholder {
-    color: #77796f;
+.search:focus {
+    border-color: #d7f36a;
 }
 
 select,
-.utility-button {
+.tool-button {
     height: 42px;
-    border: 1px solid var(--line);
-    background: var(--panel);
-    color: var(--muted);
-    padding: 0 13px;
+    background: #171916;
+    border: 1px solid #30332d;
+    color: #aaa;
+    padding: 0 14px;
     cursor: pointer;
 }
 
-.utility-button:hover,
+.tool-button:hover,
 select:hover {
-    border-color: var(--acid);
-    color: var(--text);
-}
-
-.count {
-    color: var(--muted);
-    font-size: 11px;
-    white-space: nowrap;
-}
-
-.filters {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 23px;
-}
-
-.filter {
-    flex: none;
-    background: transparent;
-    border: 1px solid var(--line);
-    color: var(--muted);
-    padding: 8px 13px;
-    cursor: pointer;
-}
-
-.filter.active {
-    background: var(--acid);
-    color: #161810;
-    border-color: var(--acid);
+    border-color: #d7f36a;
+    color: white;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 17px;
+    gap: 16px;
     padding-bottom: 70px;
 }
 
-/* IMPORTANT:
-   Wallpaper cards are BUTTONS.
-   They cannot navigate to another page.
-*/
-
 .card {
     position: relative;
-    width: 100%;
+    border: 1px solid #292c27;
+    background: #171916;
     aspect-ratio: 4 / 5;
-    padding: 0;
-    border: 1px solid #282b26;
-    background: var(--panel);
     overflow: hidden;
     cursor: pointer;
-    text-align: left;
+    padding: 0;
     color: white;
+    text-align: left;
 }
 
-.card-image {
-    position: absolute;
-    inset: 0;
+.card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .5s ease;
+    display: block;
+    transition: transform .4s ease;
 }
 
-.card:hover .card-image {
+.card:hover img {
     transform: scale(1.05);
 }
 
 .card::after {
     content: "";
     position: absolute;
-    inset: 35% 0 0;
+    inset: 40% 0 0;
     background: linear-gradient(
         transparent,
-        rgba(0,0,0,.85)
+        rgba(0,0,0,.9)
     );
     pointer-events: none;
 }
 
-.card-top {
+.card-info {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-category {
+    color: #bbbdb4;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.card-tag {
     position: absolute;
     top: 12px;
     left: 12px;
-    right: 12px;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tag {
-    background: rgba(16,17,15,.85);
+    z-index: 3;
+    background: rgba(10,10,10,.8);
     border: 1px solid rgba(255,255,255,.2);
     padding: 6px 8px;
     font-size: 9px;
     text-transform: uppercase;
 }
 
-.save-button {
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(255,255,255,.4);
-    background: rgba(16,17,15,.85);
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    z-index: 5;
-}
-
-.save-button:hover {
-    color: var(--acid);
-    border-color: var(--acid);
-}
-
-.card-caption {
-    position: absolute;
-    z-index: 2;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-}
-
-.card-title {
-    margin: 0 0 6px;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.card-subtitle {
-    color: #c2c2b8;
-    font-size: 10px;
-    text-transform: uppercase;
-}
-
+.loading,
+.error,
 .empty {
     grid-column: 1 / -1;
     padding: 70px 20px;
     text-align: center;
-    border: 1px dashed var(--line);
-    color: var(--muted);
+    color: #999c91;
 }
 
+.error strong,
 .empty strong {
     display: block;
-    color: var(--text);
-    font-size: 18px;
-    margin-bottom: 8px;
+    color: white;
+    margin-bottom: 10px;
 }
 
-.footer {
-    border-top: 1px solid var(--line);
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-between;
-    color: var(--muted);
-    font-size: 10px;
-    text-transform: uppercase;
-}
-
-
-/* =========================
-   VIEWER
-========================= */
+/* VIEWER */
 
 .viewer {
     position: fixed;
     inset: 0;
+    background: rgba(0,0,0,.94);
     z-index: 1000;
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 25px;
-    background: rgba(5,6,5,.95);
-    backdrop-filter: blur(15px);
+    padding: 20px;
 }
 
-.viewer.open {
+.viewer.active {
     display: flex;
 }
 
-.viewer-panel {
-    width: min(1150px, 96vw);
-    height: min(800px, 90vh);
-    background: var(--panel);
-    border: 1px solid var(--line);
+.viewer-box {
+    width: min(1200px, 95vw);
+    height: min(850px, 92vh);
+    background: #171916;
+    border: 1px solid #30332d;
     display: grid;
     grid-template-columns: 1fr 300px;
-    position: relative;
     overflow: hidden;
 }
 
-.viewer-visual {
-    min-width: 0;
-    min-height: 0;
+.viewer-image {
     background: #080908;
     display: flex;
     align-items: center;
@@ -381,135 +245,90 @@ select:hover {
     padding: 25px;
 }
 
-.viewer-visual img {
+.viewer-image img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
     object-fit: contain;
 }
 
-.viewer-info {
-    border-left: 1px solid var(--line);
+.viewer-side {
+    border-left: 1px solid #30332d;
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.viewer-close {
-    align-self: flex-end;
+.close {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--line);
+    align-self: flex-end;
     background: transparent;
+    border: 1px solid #30332d;
+    color: white;
     cursor: pointer;
-    display: grid;
-    place-items: center;
-    margin-bottom: auto;
+    font-size: 18px;
 }
 
-.viewer-close:hover {
-    color: var(--acid);
-    border-color: var(--acid);
+.close:hover {
+    color: #d7f36a;
+    border-color: #d7f36a;
 }
 
-.viewer-index {
-    color: var(--acid);
-    font-size: 10px;
-    margin-bottom: 15px;
+.viewer-side h2 {
+    font-size: 32px;
+    margin-top: 40px;
 }
 
-.viewer-title {
-    margin: 0 0 12px;
-    font-size: 35px;
-    line-height: 1;
+.viewer-side p {
+    color: #999c91;
+    line-height: 1.6;
+    font-size: 13px;
 }
 
-.viewer-description {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-.viewer-actions {
+.viewer-buttons {
     margin-top: auto;
 }
 
-.action-primary,
-.action-secondary {
+.download {
     width: 100%;
-    min-height: 44px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #d7f36a;
+    color: #151610;
     text-decoration: none;
-    cursor: pointer;
-    font-size: 11px;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
-.action-primary {
-    background: var(--acid);
-    color: #171910;
-    border: 1px solid var(--acid);
-    margin-bottom: 8px;
-}
-
-.action-secondary {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--line);
-    margin-bottom: 8px;
-}
-
-.action-secondary:hover {
-    color: var(--acid);
-    border-color: var(--acid);
-}
-
-.viewer-nav {
+.navigation {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
 
-.viewer-nav button {
+.navigation button {
     height: 42px;
-    border: 1px solid var(--line);
     background: transparent;
+    border: 1px solid #30332d;
+    color: white;
     cursor: pointer;
 }
 
-.viewer-nav button:hover {
-    color: var(--acid);
-    border-color: var(--acid);
+.navigation button:hover {
+    color: #d7f36a;
+    border-color: #d7f36a;
 }
 
-.viewer-error {
-    color: #f0a58a;
-    font-size: 12px;
-    text-align: center;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1050px) {
-
+@media(max-width: 1000px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
-
 }
 
-@media (max-width: 800px) {
-
-    .intro {
-        grid-template-columns: 1fr;
-    }
-
+@media(max-width: 700px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -518,267 +337,148 @@ select:hover {
         flex-direction: column;
     }
 
-    .searchbox {
+    .search {
         width: 100%;
     }
 
-    .viewer-panel {
-        width: 100%;
-        height: 94vh;
+    .viewer-box {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+        height: 95vh;
         overflow-y: auto;
     }
 
-    .viewer-visual {
-        height: 60vh;
+    .viewer-image {
+        min-height: 55vh;
     }
 
-    .viewer-info {
+    .viewer-side {
         border-left: 0;
-        border-top: 1px solid var(--line);
+        border-top: 1px solid #30332d;
     }
-
 }
 
-@media (max-width: 500px) {
-
-    .topbar {
-        padding: 0 20px;
-    }
-
-    .wrap {
-        padding: 0 20px;
-    }
-
+@media(max-width: 450px) {
     .gallery {
-        gap: 9px;
+        gap: 8px;
     }
 
-    .card-title {
-        font-size: 13px;
+    .container {
+        width: 92%;
     }
-
-    .viewer {
-        padding: 10px;
-    }
-
-    .viewer-info {
-        padding: 20px;
-    }
-
 }
 </style>
 </head>
 
-
 <body>
 
-<header class="topbar">
-
-    <a class="brand" href="#top">
-        <span class="brand-mark">P</span>
-        PERCEPTUALS
-    </a>
-
-    <div class="top-meta">
-        CURATED COLLECTION · EST. 2026
+<header>
+    <div class="logo">
+        <span>P</span>ERCEPTUALS
     </div>
 
+    <div class="header-text">
+        Automotive Wallpaper Archive
+    </div>
 </header>
 
 
-<main class="wrap" id="top">
+<main class="container">
 
-    <section class="intro">
+    <section class="hero">
+        <small>Wallpaper archive / 01</small>
+
+        <h1>
+            Made for the <em>drive.</em>
+        </h1>
+
+        <p>
+            A curated collection of automotive wallpapers
+            for your desktop and mobile screens.
+        </p>
+    </section>
+
+
+    <section class="toolbar">
+
+        <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Search wallpapers..."
+        >
 
         <div>
-
-            <div class="eyebrow">
-                Wallpaper archive / 01 — Automotive
-            </div>
-
-            <h1>
-                Made for the <em>drive.</em>
-            </h1>
-
+            <select id="sort">
+                <option value="default">Curated</option>
+                <option value="az">A → Z</option>
+                <option value="za">Z → A</option>
+            </select>
         </div>
-
-        <p class="intro-copy">
-            A collection of machines, motion and late-night roads.
-            Find a new view for your screen.
-        </p>
 
     </section>
 
 
-    <hr class="rule">
-
-
-    <section>
-
-        <div class="toolbar">
-
-            <div class="tools-left">
-
-                <label class="searchbox">
-
-                    🔍
-
-                    <input
-                        id="search"
-                        type="search"
-                        placeholder="Search the collection"
-                    >
-
-                </label>
-
-            </div>
-
-
-            <div class="tools-right">
-
-                <span
-                    class="count"
-                    id="count"
-                >
-                    Loading...
-                </span>
-
-
-                <select id="sort">
-
-                    <option value="default">
-                        Sort: Curated
-                    </option>
-
-                    <option value="az">
-                        Name: A to Z
-                    </option>
-
-                    <option value="za">
-                        Name: Z to A
-                    </option>
-
-                </select>
-
-
-                <button
-                    class="utility-button"
-                    id="favoritesOnly"
-                    type="button"
-                    aria-pressed="false"
-                >
-                    ♡ Saved
-                </button>
-
-            </div>
-
+    <section
+        id="gallery"
+        class="gallery"
+    >
+        <div class="loading">
+            Loading wallpapers...
         </div>
-
-
-        <div
-            class="filters"
-            id="filters"
-        ></div>
-
-
-        <div
-            class="gallery"
-            id="gallery"
-        ></div>
-
     </section>
-
-
-    <footer class="footer">
-
-        <span>
-            © 2026 Perceptuals
-        </span>
-
-        <span>
-            Designed for the long way home.
-        </span>
-
-    </footer>
 
 </main>
 
 
-<!-- =========================
-     VIEWER
-========================= -->
+<!-- VIEWER -->
 
 <div
-    class="viewer"
     id="viewer"
-    aria-hidden="true"
+    class="viewer"
 >
 
-    <div class="viewer-panel">
-
+    <div class="viewer-box">
 
         <div
-            class="viewer-visual"
-            id="viewerVisual"
+            id="viewerImage"
+            class="viewer-image"
         ></div>
 
 
-        <div class="viewer-info">
+        <div class="viewer-side">
 
             <button
-                class="viewer-close"
-                id="closeViewer"
+                id="close"
+                class="close"
                 type="button"
-                aria-label="Close"
             >
-                ✕
+                ×
             </button>
 
 
             <div>
 
-                <div
-                    class="viewer-index"
-                    id="viewerIndex"
-                ></div>
+                <h2 id="viewerTitle"></h2>
 
-                <h2
-                    class="viewer-title"
-                    id="viewerTitle"
-                ></h2>
-
-                <p
-                    class="viewer-description"
-                    id="viewerDescription"
-                ></p>
+                <p id="viewerCategory"></p>
 
             </div>
 
 
-            <div class="viewer-actions">
+            <div class="viewer-buttons">
 
                 <a
-                    class="action-primary"
                     id="download"
+                    class="download"
                     href="#"
                     download
                 >
-                    Download Wallpaper
+                    DOWNLOAD WALLPAPER
                 </a>
 
 
-                <button
-                    class="action-secondary"
-                    id="saveFromViewer"
-                    type="button"
-                >
-                    ♡ Save
-                </button>
-
-
-                <div class="viewer-nav">
+                <div class="navigation">
 
                     <button
                         id="previous"
@@ -807,272 +507,174 @@ select:hover {
 
 <script>
 
-/* =========================================
+/* ==========================================
+   DATA
+========================================== */
+
+let wallpapers = [];
+
+let visibleWallpapers = [];
+
+let currentWallpaper = null;
+
+
+/* ==========================================
    ELEMENTS
-========================================= */
+========================================== */
 
 const gallery =
     document.getElementById("gallery");
 
-const searchInput =
+const search =
     document.getElementById("search");
-
-const filters =
-    document.getElementById("filters");
-
-const viewer =
-    document.getElementById("viewer");
-
-const viewerVisual =
-    document.getElementById("viewerVisual");
-
-const viewerTitle =
-    document.getElementById("viewerTitle");
-
-const viewerDescription =
-    document.getElementById("viewerDescription");
-
-const viewerIndex =
-    document.getElementById("viewerIndex");
-
-const download =
-    document.getElementById("download");
-
-const closeViewerButton =
-    document.getElementById("closeViewer");
-
-const previousButton =
-    document.getElementById("previous");
-
-const nextButton =
-    document.getElementById("next");
-
-const saveFromViewer =
-    document.getElementById("saveFromViewer");
-
-const count =
-    document.getElementById("count");
 
 const sort =
     document.getElementById("sort");
 
-const favoritesOnlyButton =
-    document.getElementById("favoritesOnly");
+const viewer =
+    document.getElementById("viewer");
+
+const viewerImage =
+    document.getElementById("viewerImage");
+
+const viewerTitle =
+    document.getElementById("viewerTitle");
+
+const viewerCategory =
+    document.getElementById("viewerCategory");
+
+const download =
+    document.getElementById("download");
+
+const close =
+    document.getElementById("close");
+
+const previous =
+    document.getElementById("previous");
+
+const next =
+    document.getElementById("next");
 
 
-/* =========================================
-   STATE
-========================================= */
-
-let wallpapers = [];
-
-let visibleItems = [];
-
-let selected = null;
-
-let currentCategory = "All";
-
-let favoritesOnly = false;
-
-let saved = new Set();
-
-
-/* =========================================
-   SAVED WALLPAPERS
-========================================= */
-
-try {
-
-    saved = new Set(
-        JSON.parse(
-            localStorage.getItem(
-                "perceptuals-saved-wallpapers"
-            ) || "[]"
-        )
-    );
-
-} catch {
-
-    saved = new Set();
-
-}
-
-
-function saveStorage() {
-
-    localStorage.setItem(
-        "perceptuals-saved-wallpapers",
-        JSON.stringify([...saved])
-    );
-
-}
-
-
-function itemKey(item) {
-
-    return item.title + "|" + item.preview;
-
-}
-
-
-function toggleSaved(item) {
-
-    const key =
-        itemKey(item);
-
-    if (saved.has(key)) {
-
-        saved.delete(key);
-
-    } else {
-
-        saved.add(key);
-
-    }
-
-    saveStorage();
-
-    render();
-
-    if (selected) {
-
-        updateViewer();
-
-    }
-
-}
-
-
-/* =========================================
+/* ==========================================
    IMAGE PATH
-========================================= */
+========================================== */
 
-function imagePath(filename) {
+function getImagePath(filename) {
 
     /*
-     * encodeURI keeps the filename intact
-     * while safely handling spaces.
+     * Your PNG files are inside:
      *
-     * Example:
+     * wallpapers/
      *
-     * AMG GT.png
-     *
-     * becomes:
-     *
-     * AMG%20GT.png
+     * So we add that folder here.
      */
 
-    return encodeURI(
+    return "wallpapers/" +
         String(filename)
-            .replace(/\\/g, "/")
             .trim()
-    );
-
+            .split("/")
+            .map(
+                part =>
+                    encodeURIComponent(part)
+            )
+            .join("/");
 }
 
 
-/* =========================================
-   FILTERS
-========================================= */
+/* ==========================================
+   LOAD JSON
+========================================== */
 
-function buildFilters() {
+async function loadWallpapers() {
 
-    const categories = [
-        "All",
-        ...new Set(
-            wallpapers
-                .map(item => item.category)
-                .filter(Boolean)
-        )
-    ];
+    try {
 
+        /*
+         * cache-busting prevents GitHub Pages/browser
+         * from giving us an old JSON file.
+         */
 
-    filters.innerHTML = "";
-
-
-    categories.forEach(category => {
-
-        const button =
-            document.createElement("button");
-
-        button.type =
-            "button";
-
-        button.className =
-            "filter" +
-            (
-                currentCategory === category
-                    ? " active"
-                    : ""
+        const response =
+            await fetch(
+                "./wallpapers.json?v=" +
+                Date.now(),
+                {
+                    cache: "no-store"
+                }
             );
 
-        button.textContent =
-            category;
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load wallpapers.json. HTTP " +
+                response.status
+            );
+
+        }
 
 
-        button.addEventListener(
-            "click",
-            () => {
-
-                currentCategory =
-                    category;
-
-                buildFilters();
-
-                render();
-
-            }
-        );
+        const data =
+            await response.json();
 
 
-        filters.appendChild(button);
+        if (!Array.isArray(data)) {
 
-    });
+            throw new Error(
+                "wallpapers.json must contain a JSON array."
+            );
+
+        }
+
+
+        wallpapers =
+            data;
+
+
+        render();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+
+        gallery.innerHTML = `
+            <div class="error">
+                <strong>Could not load the collection.</strong>
+                ${error.message}
+            </div>
+        `;
+
+    }
 
 }
 
 
-/* =========================================
-   GET VISIBLE ITEMS
-========================================= */
+/* ==========================================
+   FILTER
+========================================== */
 
-function getVisibleItems() {
+function getVisibleWallpapers() {
 
-    const search =
-        searchInput.value
+    const query =
+        search.value
             .trim()
             .toLowerCase();
 
 
-    let list =
+    let result =
         wallpapers.filter(item => {
 
-            const matchesCategory =
-                currentCategory === "All" ||
-                item.category === currentCategory;
-
-
-            const matchesSearch =
-                !search ||
+            return (
                 String(item.title || "")
                     .toLowerCase()
-                    .includes(search) ||
+                    .includes(query)
+                ||
                 String(item.category || "")
                     .toLowerCase()
-                    .includes(search);
-
-
-            const matchesFavorites =
-                !favoritesOnly ||
-                saved.has(
-                    itemKey(item)
-                );
-
-
-            return (
-                matchesCategory &&
-                matchesSearch &&
-                matchesFavorites
+                    .includes(query)
             );
 
         });
@@ -1080,7 +682,7 @@ function getVisibleItems() {
 
     if (sort.value === "az") {
 
-        list.sort(
+        result.sort(
             (a, b) =>
                 a.title.localeCompare(b.title)
         );
@@ -1090,7 +692,7 @@ function getVisibleItems() {
 
     if (sort.value === "za") {
 
-        list.sort(
+        result.sort(
             (a, b) =>
                 b.title.localeCompare(a.title)
         );
@@ -1098,38 +700,30 @@ function getVisibleItems() {
     }
 
 
-    return list;
+    return result;
 
 }
 
 
-/* =========================================
+/* ==========================================
    RENDER
-========================================= */
+========================================== */
 
 function render() {
 
-    visibleItems =
-        getVisibleItems();
-
-
-    count.textContent =
-        `${visibleItems.length} ${
-            visibleItems.length === 1
-                ? "wallpaper"
-                : "wallpapers"
-        }`;
+    visibleWallpapers =
+        getVisibleWallpapers();
 
 
     gallery.innerHTML = "";
 
 
-    if (!visibleItems.length) {
+    if (visibleWallpapers.length === 0) {
 
         gallery.innerHTML = `
             <div class="empty">
-                <strong>Nothing in view.</strong>
-                Try another search or category.
+                <strong>No wallpapers found.</strong>
+                Try another search.
             </div>
         `;
 
@@ -1138,257 +732,129 @@ function render() {
     }
 
 
-    visibleItems.forEach(item => {
+    visibleWallpapers.forEach(
+        (item, index) => {
 
-        /*
-         * IMPORTANT:
-         *
-         * This is a BUTTON.
-         *
-         * It has NO href.
-         * It cannot navigate to a page.
-         * Clicking it only calls openViewer().
-         */
+            /*
+             * BUTTON, NOT A LINK.
+             *
+             * Therefore clicking it cannot
+             * navigate to a 404 page.
+             */
 
-        const card =
-            document.createElement("button");
+            const card =
+                document.createElement("button");
 
-        card.type =
-            "button";
+            card.type =
+                "button";
 
-        card.className =
-            "card";
+            card.className =
+                "card";
 
 
-        /* IMAGE */
-
-        const image =
-            document.createElement("img");
-
-        image.className =
-            "card-image";
-
-        image.src =
-            imagePath(item.preview);
-
-        image.alt =
-            item.title;
-
-        image.loading =
-            "lazy";
+            const image =
+                document.createElement("img");
 
 
-        image.addEventListener(
-            "error",
-            () => {
-
-                image.style.display =
-                    "none";
-
-                card.style.background =
-                    "#252823";
-
-            }
-        );
-
-
-        card.appendChild(image);
-
-
-        /* TOP */
-
-        const top =
-            document.createElement("div");
-
-        top.className =
-            "card-top";
-
-
-        const tag =
-            document.createElement("span");
-
-        tag.className =
-            "tag";
-
-        tag.textContent =
-            item.premium
-                ? "Premium"
-                : (
-                    item.resolution ||
-                    "Wallpaper"
+            image.src =
+                getImagePath(
+                    item.preview
                 );
 
 
-        top.appendChild(tag);
+            image.alt =
+                item.title;
 
 
-        /* SAVE */
-
-        const save =
-            document.createElement("button");
-
-        save.type =
-            "button";
-
-        save.className =
-            "save-button";
-
-        save.innerHTML =
-            saved.has(itemKey(item))
-                ? "♥"
-                : "♡";
+            image.loading =
+                "lazy";
 
 
-        save.addEventListener(
-            "click",
-            event => {
+            image.onerror =
+                function() {
 
-                /*
-                 * Prevent the save button
-                 * from also opening the viewer.
-                 */
+                    console.error(
+                        "Image failed:",
+                        image.src
+                    );
 
-                event.preventDefault();
-
-                event.stopPropagation();
-
-                toggleSaved(item);
-
-            }
-        );
+                };
 
 
-        top.appendChild(save);
+            const tag =
+                document.createElement("div");
 
-        card.appendChild(top);
+            tag.className =
+                "card-tag";
 
-
-        /* CAPTION */
-
-        const caption =
-            document.createElement("div");
-
-        caption.className =
-            "card-caption";
+            tag.textContent =
+                item.premium
+                    ? "Premium"
+                    : "Wallpaper";
 
 
-        const title =
-            document.createElement("div");
+            const info =
+                document.createElement("div");
 
-        title.className =
-            "card-title";
-
-        title.textContent =
-            item.title;
+            info.className =
+                "card-info";
 
 
-        const subtitle =
-            document.createElement("div");
+            info.innerHTML = `
+                <div class="card-title">
+                    ${escapeHTML(item.title)}
+                </div>
 
-        subtitle.className =
-            "card-subtitle";
-
-        subtitle.textContent =
-            `${item.category || "Wallpaper"} / ${
-                item.resolution || "HD"
-            }`;
-
-
-        caption.appendChild(title);
-
-        caption.appendChild(subtitle);
-
-        card.appendChild(caption);
+                <div class="card-category">
+                    ${escapeHTML(item.category || "Automotive")}
+                </div>
+            `;
 
 
-        /*
-         * THE IMPORTANT CLICK HANDLER
-         *
-         * No URL.
-         * No href.
-         * No page navigation.
-         */
+            card.appendChild(image);
 
-        card.addEventListener(
-            "click",
-            event => {
+            card.appendChild(tag);
 
-                event.preventDefault();
-
-                event.stopPropagation();
-
-                openViewer(item);
-
-            }
-        );
+            card.appendChild(info);
 
 
-        gallery.appendChild(card);
+            card.addEventListener(
+                "click",
+                function(event) {
 
-    });
+                    event.preventDefault();
+
+                    openViewer(item);
+
+                }
+            );
+
+
+            gallery.appendChild(card);
+
+        }
+    );
 
 }
 
 
-/* =========================================
+/* ==========================================
    OPEN VIEWER
-========================================= */
+========================================== */
 
 function openViewer(item) {
 
-    selected =
+    currentWallpaper =
         item;
 
 
-    viewer.classList.add("open");
-
-    viewer.setAttribute(
-        "aria-hidden",
-        "false"
-    );
+    const imagePath =
+        getImagePath(
+            item.preview
+        );
 
 
-    document.body.style.overflow =
-        "hidden";
-
-
-    updateViewer();
-
-}
-
-
-/* =========================================
-   UPDATE VIEWER
-========================================= */
-
-function updateViewer() {
-
-    if (!selected) {
-        return;
-    }
-
-
-    const index =
-        visibleItems.indexOf(selected);
-
-
-    viewerIndex.textContent =
-        `${index + 1} / ${visibleItems.length}`;
-
-
-    viewerTitle.textContent =
-        selected.title;
-
-
-    viewerDescription.textContent =
-        `${selected.category || "Wallpaper"} · ${
-            selected.resolution || "High resolution"
-        }`;
-
-
-    /* IMAGE */
-
-    viewerVisual.innerHTML = "";
+    viewerImage.innerHTML = "";
 
 
     const image =
@@ -1396,210 +862,162 @@ function updateViewer() {
 
 
     image.src =
-        imagePath(selected.preview);
+        imagePath;
 
 
     image.alt =
-        selected.title;
+        item.title;
 
 
-    image.addEventListener(
-        "error",
-        () => {
+    image.onerror =
+        function() {
 
-            viewerVisual.innerHTML = `
-                <div class="viewer-error">
+            viewerImage.innerHTML = `
+                <div style="
+                    color:#aaa;
+                    text-align:center;
+                    padding:20px;
+                ">
                     Image could not be loaded.<br><br>
-                    ${selected.preview}
+                    ${escapeHTML(imagePath)}
                 </div>
             `;
 
-        }
-    );
+        };
 
 
-    viewerVisual.appendChild(image);
+    viewerImage.appendChild(image);
 
 
-    /* DOWNLOAD */
+    viewerTitle.textContent =
+        item.title;
 
-    const file =
-        selected.download ||
-        selected.preview;
+
+    viewerCategory.textContent =
+        item.category || "Automotive";
 
 
     download.href =
-        imagePath(file);
+        imagePath;
 
 
     download.download =
-        file
-            .split("/")
-            .pop();
+        item.preview;
 
 
-    /* SAVE */
-
-    saveFromViewer.innerHTML =
-        saved.has(itemKey(selected))
-            ? "♥ Saved"
-            : "♡ Save";
-
-}
+    viewer.classList.add(
+        "active"
+    );
 
 
-/* =========================================
-   PREVIOUS
-========================================= */
-
-function previousWallpaper() {
-
-    if (
-        !selected ||
-        visibleItems.length === 0
-    ) {
-        return;
-    }
-
-
-    const currentIndex =
-        visibleItems.indexOf(selected);
-
-
-    const newIndex =
-        (
-            currentIndex -
-            1 +
-            visibleItems.length
-        ) %
-        visibleItems.length;
-
-
-    selected =
-        visibleItems[newIndex];
-
-
-    updateViewer();
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
-/* =========================================
-   NEXT
-========================================= */
-
-function nextWallpaper() {
-
-    if (
-        !selected ||
-        visibleItems.length === 0
-    ) {
-        return;
-    }
-
-
-    const currentIndex =
-        visibleItems.indexOf(selected);
-
-
-    const newIndex =
-        (
-            currentIndex +
-            1
-        ) %
-        visibleItems.length;
-
-
-    selected =
-        visibleItems[newIndex];
-
-
-    updateViewer();
-
-}
-
-
-/* =========================================
+/* ==========================================
    CLOSE VIEWER
-========================================= */
+========================================== */
 
 function closeViewer() {
 
-    viewer.classList.remove("open");
-
-    viewer.setAttribute(
-        "aria-hidden",
-        "true"
+    viewer.classList.remove(
+        "active"
     );
 
 
     document.body.style.overflow =
         "";
 
+}
 
-    selected =
-        null;
+
+/* ==========================================
+   NEXT
+========================================== */
+
+function nextWallpaper() {
+
+    if (!currentWallpaper) {
+        return;
+    }
+
+
+    const index =
+        visibleWallpapers.indexOf(
+            currentWallpaper
+        );
+
+
+    const nextIndex =
+        (
+            index + 1
+        ) %
+        visibleWallpapers.length;
+
+
+    openViewer(
+        visibleWallpapers[nextIndex]
+    );
 
 }
 
 
-/* =========================================
+/* ==========================================
+   PREVIOUS
+========================================== */
+
+function previousWallpaper() {
+
+    if (!currentWallpaper) {
+        return;
+    }
+
+
+    const index =
+        visibleWallpapers.indexOf(
+            currentWallpaper
+        );
+
+
+    const previousIndex =
+        (
+            index -
+            1 +
+            visibleWallpapers.length
+        ) %
+        visibleWallpapers.length;
+
+
+    openViewer(
+        visibleWallpapers[previousIndex]
+    );
+
+}
+
+
+/* ==========================================
+   ESCAPE HTML
+========================================== */
+
+function escapeHTML(value) {
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+/* ==========================================
    EVENTS
-========================================= */
+========================================== */
 
-closeViewerButton.addEventListener(
-    "click",
-    event => {
-
-        event.preventDefault();
-
-        closeViewer();
-
-    }
-);
-
-
-previousButton.addEventListener(
-    "click",
-    event => {
-
-        event.preventDefault();
-
-        previousWallpaper();
-
-    }
-);
-
-
-nextButton.addEventListener(
-    "click",
-    event => {
-
-        event.preventDefault();
-
-        nextWallpaper();
-
-    }
-);
-
-
-saveFromViewer.addEventListener(
-    "click",
-    event => {
-
-        event.preventDefault();
-
-        if (selected) {
-
-            toggleSaved(selected);
-
-        }
-
-    }
-);
-
-
-searchInput.addEventListener(
+search.addEventListener(
     "input",
     render
 );
@@ -1611,36 +1029,31 @@ sort.addEventListener(
 );
 
 
-favoritesOnlyButton.addEventListener(
+close.addEventListener(
     "click",
-    event => {
-
-        event.preventDefault();
-
-        favoritesOnly =
-            !favoritesOnly;
+    closeViewer
+);
 
 
-        favoritesOnlyButton.setAttribute(
-            "aria-pressed",
-            String(favoritesOnly)
-        );
+next.addEventListener(
+    "click",
+    nextWallpaper
+);
 
 
-        render();
-
-    }
+previous.addEventListener(
+    "click",
+    previousWallpaper
 );
 
 
 /*
- * Clicking the dark area outside
- * the viewer closes it.
+ * Clicking outside the viewer closes it.
  */
 
 viewer.addEventListener(
     "click",
-    event => {
+    function(event) {
 
         if (
             event.target === viewer
@@ -1654,15 +1067,17 @@ viewer.addEventListener(
 );
 
 
-/* =========================================
-   KEYBOARD CONTROLS
-========================================= */
+/*
+ * Keyboard controls.
+ */
 
 document.addEventListener(
     "keydown",
-    event => {
+    function(event) {
 
-        if (!selected) {
+        if (
+            !viewer.classList.contains("active")
+        ) {
             return;
         }
 
@@ -1677,15 +1092,6 @@ document.addEventListener(
 
 
         if (
-            event.key === "ArrowLeft"
-        ) {
-
-            previousWallpaper();
-
-        }
-
-
-        if (
             event.key === "ArrowRight"
         ) {
 
@@ -1693,87 +1099,22 @@ document.addEventListener(
 
         }
 
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            previousWallpaper();
+
+        }
+
     }
 );
 
 
-/* =========================================
-   LOAD WALLPAPERS.JSON
-========================================= */
-
-async function loadWallpapers() {
-
-    try {
-
-        const response =
-            await fetch(
-                "./wallpapers.json"
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "Could not load wallpapers.json"
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        if (!Array.isArray(data)) {
-
-            throw new Error(
-                "wallpapers.json must contain an array"
-            );
-
-        }
-
-
-        wallpapers =
-            data.filter(
-                item =>
-                    item &&
-                    item.title &&
-                    item.preview
-            );
-
-
-        buildFilters();
-
-        render();
-
-
-    } catch (error) {
-
-        console.error(error);
-
-
-        gallery.innerHTML = `
-            <div class="empty">
-                <strong>
-                    Could not load the collection.
-                </strong>
-
-                Make sure wallpapers.json
-                is in the same folder as index.html.
-            </div>
-        `;
-
-        count.textContent =
-            "Collection unavailable";
-
-    }
-
-}
-
-
-/* =========================================
+/* ==========================================
    START
-========================================= */
+========================================== */
 
 loadWallpapers();
 
