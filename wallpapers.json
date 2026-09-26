@@ -1,204 +1,177 @@
 [
   {
-    "title": "918",
+    "name": "918",
+    "image": "wallpapers/918.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/918.png",
-    "download": "wallpapers/918.png",
     "premium": true
   },
   {
-    "title": "R35",
+    "name": "R35",
+    "image": "wallpapers/R35.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/R35.png",
-    "download": "wallpapers/R35.png",
     "premium": true
   },
   {
-    "title": "Lotus Exige",
+    "name": "Lotus Exige",
+    "image": "wallpapers/EXIGE.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/EXIGE.png",
-    "download": "wallpapers/EXIGE.png",
     "premium": true
   },
   {
-    "title": "Dodge Viper ACR",
+    "name": "Dodge Viper ACR",
+    "image": "wallpapers/VIPER ACR.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/VIPER ACR.png",
-    "download": "wallpapers/VIPER ACR.png",
     "premium": true
   },
   {
-    "title": "ZL1 Camaro",
+    "name": "ZL1 Camaro",
+    "image": "wallpapers/ZL1 CAMARO.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/ZL1 CAMARO.png",
-    "download": "wallpapers/ZL1 CAMARO.png",
     "premium": true
   },
   {
-    "title": "Ford GT",
+    "name": "Ford GT",
+    "image": "wallpapers/FORD GT.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/FORD GT.png",
-    "download": "wallpapers/FORD GT.png",
     "premium": true
   },
   {
-    "title": "Bugatti Chiron",
+    "name": "Bugatti Chiron",
+    "image": "wallpapers/CHIRON.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/CHIRON.png",
-    "download": "wallpapers/CHIRON.png",
     "premium": true
   },
   {
-    "title": "Koenigsegg Jesko",
+    "name": "Koenigsegg Jesko",
+    "image": "wallpapers/JESKO.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/JESKO.png",
-    "download": "wallpapers/JESKO.png",
     "premium": true
   },
   {
-    "title": "Pagani Huayra",
+    "name": "Pagani Huayra",
+    "image": "wallpapers/HUAYRA.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/HUAYRA.png",
-    "download": "wallpapers/HUAYRA.png",
     "premium": true
   },
   {
-    "title": "Lamborghini Aventador",
+    "name": "Lamborghini Aventador",
+    "image": "wallpapers/AVENTADOR.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/AVENTADOR.png",
-    "download": "wallpapers/AVENTADOR.png",
     "premium": true
   },
   {
-    "title": "McLaren 720S",
+    "name": "McLaren 720S",
+    "image": "wallpapers/720S.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/720S.png",
-    "download": "wallpapers/720S.png",
     "premium": true
   },
   {
-    "title": "Ferrari 458",
+    "name": "Ferrari 458",
+    "image": "wallpapers/458.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/458.png",
-    "download": "wallpapers/458.png",
     "premium": true
   },
   {
-    "title": "Lamborghini Huracan",
+    "name": "Lamborghini Huracan",
+    "image": "wallpapers/HURACAN.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/HURACAN.png",
-    "download": "wallpapers/HURACAN.png",
     "premium": true
   },
   {
-    "title": "Porsche 911 GT3",
+    "name": "Porsche 911 GT3",
+    "image": "wallpapers/911 GT3.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "wallpapers/911 GT3.png",
-    "download": "wallpapers/911 GT3.png",
-    "premium": true
-  }
-]
-[
-  {
-    "title": "R8",
-    "category": "Automotive",
-    "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/R8.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/R8.png",
     "premium": true
   },
   {
-    "title": "AMG GT",
+    "name": "Audi R8",
+    "image": "wallpapers/R8.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/AMG%20GT.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/AMG%20GT.png",
     "premium": true
   },
   {
-    "title": "M4",
+    "name": "Mercedes-AMG GT",
+    "image": "wallpapers/AMG GT.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/M4.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/M4.png",
     "premium": true
   },
   {
-    "title": "E46",
+    "name": "BMW M4",
+    "image": "wallpapers/M4.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/E46.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/E46.png",
     "premium": true
   },
   {
-    "title": "SRT",
+    "name": "BMW E46",
+    "image": "wallpapers/E46.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/SRT.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/SRT.png",
     "premium": true
   },
   {
-    "title": "C8",
+    "name": "Nissan Silvia S15",
+    "image": "wallpapers/SILVIA S15.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/C8.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/C8.png",
     "premium": true
   },
   {
-    "title": "Mustang GT",
+    "name": "Nissan 350Z",
+    "image": "wallpapers/350Z.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/MUSTANG%20GT.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/MUSTANG%20GT.png",
     "premium": true
   },
   {
-    "title": "AE86",
+    "name": "Honda NSX",
+    "image": "wallpapers/HONDA NSX.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/AE86.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/AE86.png",
     "premium": true
   },
   {
-    "title": "Silvia S15",
+    "name": "Subaru BRZ",
+    "image": "wallpapers/SRT.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/SILVIA%20S15.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/SILVIA%20S15.png",
     "premium": true
   },
   {
-    "title": "350Z",
+    "name": "Chevrolet Corvette C8",
+    "image": "wallpapers/C8.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/350Z.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/350Z.png",
     "premium": true
   },
   {
-    "title": "Honda NSX",
+    "name": "Ford Mustang GT",
+    "image": "wallpapers/MUSTANG GT.png",
     "category": "Automotive",
     "resolution": "4K",
-    "preview": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/HONDA%20NSX.png",
-    "download": "https://justinsebastian340-prog.github.io/jvx7n/wallpapers/HONDA%20NSX.png",
+    "premium": true
+  },
+  {
+    "name": "Toyota AE86",
+    "image": "wallpapers/AE86.png",
+    "category": "Automotive",
+    "resolution": "4K",
     "premium": true
   }
 ]
